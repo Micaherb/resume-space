@@ -8,25 +8,13 @@ body {
     overflow-x: hidden;
 }
 
-#target {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: red;
-    position: fixed;
-    top: 520px;
-    right: 85px;
-}
-
 #ship {
-    width: 100px;
+    width: 30px;
     height: 100px;
     border-radius: 10%;
-    background: white;
+    background: linear-gradient(0deg, red, white);
     position: absolute;
     background-position: center center;
-    top: 475px; /* target top - 45 */
-    right: 40px; /* target right - 45 */
 }
 
 #star-container {
@@ -48,10 +36,21 @@ body {
     height: 750px;
     border-radius: 50%;
     /* background: linear-gradient(90deg, green, blue); */
-    background-image: url('texture.png');
+    background-image: url('textures/texture.png');
     /* transform: rotate(45deg); */
     background-position: center center;
     position: absolute;
     top: -400px;
     right: -300px;
+}
+
+#moon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('textures/moon.webp');
+    background-position: center center;
+    position: absolute;
+    top: -100px;
+    right: 50px;
 }
