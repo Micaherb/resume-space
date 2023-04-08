@@ -1,5 +1,3 @@
-import { Kinematic } from './kinematic.js';
-
 function dist_form(d) {return Math.sqrt((d[0]*d[0])+(d[1]*d[1]));}
 
 function normalize(d) {
@@ -22,7 +20,7 @@ function mapToRange(t) {
     }
 }
 
-export function Position(t, k) {
+export function position(t, k) {
     //Tune params
     let radDec = 200;
     let maxVelocity = 400;
@@ -48,7 +46,7 @@ export function Position(t, k) {
     return acc;
 }
 
-export function Orientation(r, k) {
+export function orientation(r, k) {
     //Tune Params
     let radDec = 30;
     let maxRotation = 150;
