@@ -1,0 +1,9 @@
+body {
+    height: 4000px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.text {
+    color: red;
+}
