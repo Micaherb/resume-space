@@ -1,5 +1,5 @@
 export function setGreenBackground() {
-    document.body.style.backgroundColor = "black";
+    document.body.style.backgroundColor = "#1D2B53";
     const numStars = 4000;
     const starSize = 2;
     const starColor = "#fff";
