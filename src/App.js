@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <ColoredBlock text="Hello, World!" color="#FF5733BB" height={750} contentComponent={<HTMLRenderer htmlString={htmlString} />} />
+        <ColoredBlock text="Hello, World!" color="#FF5733BB" height={850} contentComponent={<HTMLRenderer htmlString={htmlString} />} />
         <ColoredBlock text="Micah" color="#5733FFBB" height={750} />
         <ColoredBlock text="Erb" color="#57FF33BB" height={750} />
       </header>
