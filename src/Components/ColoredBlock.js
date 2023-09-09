@@ -12,8 +12,6 @@ const ColoredBlock = ({ text, color, height, contentComponent }) => {
     minHeight: height,
   };
 
-  console.log(height);
-
   return (
     <div className={`colored-block`} style={blockStyle}>
       {text}

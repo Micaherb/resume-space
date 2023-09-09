@@ -1,16 +1,23 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useRef, useEffect, useMemo } from 'react';
 
-const HTMLRenderer = ({ htmlString }) => {
-  const createMarkup = () => {
-    return { __html: htmlString };
-  };
+function HTMLRenderer({ htmlString }) {
+  const contentRef = useRef();
 
-  return <div dangerouslySetInnerHTML={createMarkup()} />;
-};
+  const fragment = useMemo(() => {
+    return document.createRange().createContextualFragment(
+      `<div>${htmlString}</div>`
+    );
+  }, [htmlString]);
 
-HTMLRenderer.propTypes = {
-  htmlString: PropTypes.string.isRequired,
-};
+  useEffect(() => {
+    if (contentRef.current) {
+      contentRef.current.appendChild(fragment);
+    } else {
+      return;
+    }
+  }, [fragment]);
+
+  return <div ref={contentRef} />;
+}
 
 export default HTMLRenderer;
